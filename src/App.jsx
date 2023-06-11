@@ -12,10 +12,12 @@ const App = () => {
     try {
       const res = await fetch(url);
       const tours = await res.json();
-      console.log(tours);
+      setTours(tours);
     } catch (error) {
       console.log(error);
     }
+
+    setIsLoading(false)
   }
 
 
@@ -25,7 +27,11 @@ const App = () => {
 
 
   if (isLoading) {
-    return <Loading />
+    return (
+      <main>
+        <Loading />        
+      </main>
+    )
   }
 
 
