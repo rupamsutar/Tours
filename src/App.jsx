@@ -29,6 +29,12 @@ const App = () => {
     fetchTours();
   }, []);
 
+  return(
+  <main>
+    <Loading />
+  </main>
+  )
+
   if (isLoading) {
     return (
       <main>
