@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Tour = () => {
+const Tour = ({id, image, info, name, price}) => {
   return (
-    <div>Tour</div>
+    <article className="single-tour">
+        <img src={image} alt={name} className="img" />
+        <span className="tour-price">${price}</span>
+        <div className="tour-info">
+            <h5>{name}</h5>
+            <p>{info}</p>
+        </div>
+    </article>
   )
 }
 
